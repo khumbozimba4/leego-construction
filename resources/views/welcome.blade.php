@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('title', 'Home Page') <!-- Set a custom title -->
+@extends('layouts.frontend')
+@section('title', 'Dashboard Page') <!-- Set a custom title -->
 
 @section('slider')
 

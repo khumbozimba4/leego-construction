@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.frontend')
 @section('breadcrumb')
            <!-- breadcroumb area start -->
            <x-breadcrumb :title="'Contact Us'" :links="['Home' => url('/'), 'Contact Us' => '#']" />

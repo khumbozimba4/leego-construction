@@ -1,18 +1,7 @@
-import "./bootstrap";
-import "./jquery-3.7.0.min";
-import "./popper.min";
-import "./bootstrap.min";
-import "./meanmenu.min";
-import "./owl.carousel.min";
-import "./waypoints.min";
-import "./counterup.min";
-import "./jquery-ui";
-import "./jquery.barfiller";
-import "./imagesloaded.min";
-import "./magnific-popup.min";
-import "./nice-select.min";
-import "./scrolltop";
-import "./wow.min";
-import "./ajax-form";
-import "./plugins";
-import "./main";
+import './bootstrap';
+
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();

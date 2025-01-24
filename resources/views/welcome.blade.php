@@ -3,9 +3,6 @@
 
 @section('slider')
 
-
-
-
     <x-slider :slides="[
         [
             'image' => 'assets/img/leego/bomag-horizontal.webp',

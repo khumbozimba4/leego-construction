@@ -118,29 +118,37 @@
                     <div class="xl:w-7/12 lg:w-7/12 md:w-7/12 w-full flex-[0_0_auto] max-w-full px-[12px]">
                         <ul
                             class="header-middle-short-info float-right owl-carousel owl-theme inline-block mx-0 my-[7px] sm:text-center">
-                            <li class=" inline-flex items-center justify-center ml-5  max-w-full">
-                                <i
-                                    class="fa fa-phone text-white w-[30px] h-8 text-center align-middle leading-8 text-lg mr-2.5 bg-[#ffab00]"></i>
+                            <li class="inline-flex items-center justify-center ml-5 max-w-full">
+                                <div class="icon-container flex items-center justify-center w-[30px] h-8 bg-[#ffab00] mr-2.5">
+                                    <i class="fa fa-phone text-white text-lg"></i>
+                                </div>
                                 <div class="short-info text-[14px] capitalize text-[#777777] font-normal font-OpenSans">
-                                    phone number: <h4 class=" text-[14px] font-bold leading-[18px]">+265 (0) 888 733 480</h4>
+                                    phone number:
+                                    <h4 class="text-[14px] font-bold leading-[18px]">+265 (0) 888 733 480</h4>
                                 </div>
                             </li>
-                            <li class=" inline-flex items-center justify-center ml-5">
-                                <i
-                                    class="fa fa-at text-white w-[30px] h-8 text-center align-middle leading-8 text-lg mr-2.5 bg-[#ffab00]"></i>
-                                <div class="short-info text-[14px] capitalize text-[#777777] font-normal font-OpenSans">
-                                    email address: <h4 class=" text-[14px] font-bold leading-[18px]">leonardgondwe@gmail.com
-                                    </h4>
-                                </div>
-                            </li>
-                            <li class=" inline-flex items-center justify-center ml-5">
-                                <i
-                                    class="fa fa-map-marker text-white w-[30px] h-8 text-center align-middle leading-8 text-lg mr-2.5 bg-[#ffab00]"></i>
-                                <div class="short-info text-[14px] capitalize text-[#777777] font-normal font-OpenSans">
-                                    address location: <h4 class=" text-[14px] font-bold leading-[18px]">Mpemba opposite ADMARC,
-                                        BL 22</h4>
-                                </div>
-                            </li>
+
+                                <!-- Email Address -->
+                                <li class="inline-flex items-center justify-center ml-5 max-w-full">
+                                    <div class="icon-container flex items-center justify-center w-[30px] h-8 bg-[#ffab00] mr-2.5">
+                                        <i class="fa fa-at text-white text-lg"></i>
+                                    </div>
+                                    <div class="short-info text-[14px] capitalize text-[#777777] font-normal font-OpenSans">
+                                        email address:
+                                        <h4 class="text-[14px] font-bold leading-[18px]">leonardgondwe@gmail.com</h4>
+                                    </div>
+                                </li>
+
+                                <!-- Address Location -->
+                                <li class="inline-flex items-center justify-center ml-5 max-w-full">
+                                    <div class="icon-container flex items-center justify-center w-[30px] h-8 bg-[#ffab00] mr-2.5">
+                                        <i class="fa fa-map-marker text-white text-lg"></i>
+                                    </div>
+                                    <div class="short-info text-[14px] capitalize text-[#777777] font-normal font-OpenSans">
+                                        address location:
+                                        <h4 class="text-[14px] font-bold leading-[18px]">Mpemba opposite ADMARC, BL 22</h4>
+                                    </div>
+                                </li>
                         </ul>
                     </div>
                 </div>

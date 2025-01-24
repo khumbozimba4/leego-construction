@@ -80,23 +80,7 @@
                         </h4>
                         <p class="text-[#757575]">M1 street, Mpemba, Opposite Admarc Stage, Blantyre</p>
                     </div>
-                    <ul class="footer-social">
-                        <li class="inline-block mr-1.5 mb-1.5">
-                            <a class="!bg-[#ffab00] text-[16px] text-white text-center block w-10 h-10 leading-10 rounded-[2px]" href="index.html#">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="inline-block mr-1.5 mb-1.5">
-                            <a class="!bg-[#ffab00] text-[16px] text-white text-center block w-10 h-10 leading-10 rounded-[2px]" href="index.html#">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li class="inline-block mr-1.5 mb-1.5">
-                            <a class="!bg-[#ffab00] text-[16px] text-white text-center block w-10 h-10 leading-10 rounded-[2px]" href="index.html#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                    </ul>
+
                 </div>
             </div>
         </div>

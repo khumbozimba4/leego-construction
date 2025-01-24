@@ -63,9 +63,7 @@
                         <li class="inline-block ml-0 mr-[5px] mt-0 mb-2.5">
                             <a class="text-[13px] leading-6 text-[#363636] border block transition-all duration-[0.2s] px-2 py-2.5 border-solid border-[#f1f1f1] hover:text-white hover:bg-[#ffab00]" href="index.html#">Excavation</a>
                         </li>
-                        <li class="inline-block ml-0 mr-[5px] mt-0 mb-2.5">
-                            <a class="text-[13px] leading-6 text-[#363636] border block transition-all duration-[0.2s] px-2 py-2.5 border-solid border-[#f1f1f1] hover:text-white hover:bg-[#ffab00]" href="index.html#">Consulting</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -80,7 +78,7 @@
                         <h4>
                             <a class="text-[18px] text-black font-semibold block capitalize mb-5 font-Montserrat" href="index.html#">Head Office</a>
                         </h4>
-                        <p class="text-[#757575]">123 Civil Street, Downtown, Springfield</p>
+                        <p class="text-[#757575]">M1 street, Mpemba, Opposite Admarc Stage, Blantyre</p>
                     </div>
                     <ul class="footer-social">
                         <li class="inline-block mr-1.5 mb-1.5">

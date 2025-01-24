@@ -14,20 +14,24 @@
                 <div id="tractour-map" class=" w-full h-[442px]">
                     <div class="contact-info-detail sm:mt-[30px]">
                         <h2 class=" font-semibold leading-[30px] capitalize text-[30px]">more information</h2>
-                        <p class=" mx-0 my-5">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+                        <p class=" mx-0 my-5">
+                            We are committed to providing top-notch civil construction services, including road construction, bridge building, pothole repairs, and equipment rentals. Contact us today to discuss your next project or to rent equipment for your construction needs
+                        </p>
                         <ul class="contact-text-info">
                             <li class=" block mb-5">
                                 <strong class=" capitalize text-[18px]"><span class=" text-[#ffab00] inline-block text-[18px] leading-[30px] text-center transition-all duration-[0.3s] mr-2.5"><i class="fa fa-map-marker"></i></span> location</strong>
-                                <p class=" mt-2.5">BK road 123 jessore js, chowrasta</p>
+                                <p class=" mt-2.5">Off Mpemba Road, Opposite Admarc Stage</p>
                             </li>
 
                             <li class=" block mb-5">
-                                <strong class=" capitalize text-[18px]"><span class=" text-[#ffab00] inline-block text-[18px] leading-[30px] text-center transition-all duration-[0.3s] mr-2.5"><i class="fa fa-envelope"></i></span> email</strong>
-                                <p class=" mt-2.5">tractour@info.ca<br> www.tractour-info.ca</p>
+                                <strong class=" capitalize text-[18px]"><span class=" text-[#ffab00] inline-block text-[18px] leading-[30px] text-center transition-all duration-[0.3s] mr-2.5"><i class="fa fa-phone"></i></span> call us</strong>
+                                <p class=" mt-2.5">
+                                    <a href="tel:+265 888 36 83 36">+265 888 36 83 36</a>
+                                    </p>
                             </li>
                             <li class=" block mb-5">
-                                <strong class=" capitalize text-[18px]"><span class=" text-[#ffab00] inline-block text-[18px] leading-[30px] text-center transition-all duration-[0.3s] mr-2.5"><i class="fa fa-phone"></i></span> call us</strong>
-                                <p class=" mt-2.5">+880-121-345-678 <br> +880-121-345-678</p>
+                                <strong class=" capitalize text-[18px]"><span class=" text-[#ffab00] inline-block text-[18px] leading-[30px] text-center transition-all duration-[0.3s] mr-2.5"><i class="fa fa-envelope"></i></span> email</strong>
+                                <p class=" mt-2.5"> <a href="mailto:leonardgondwe@gmail.com">leonardgondwe@gmail.com</a> </p>
                             </li>
                         </ul>
                     </div>

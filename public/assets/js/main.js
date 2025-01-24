@@ -139,6 +139,10 @@
         barColor: "#ffab00",
         duration: 3000,
     });
+    $("#bar5").barfiller({
+        barColor: "#ffab00",
+        duration: 3000,
+    });
 
     /*----------------------------
      		Testimonial Active

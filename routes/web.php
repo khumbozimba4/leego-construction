@@ -18,6 +18,6 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
-Route::get('/projects', [HomeController::class, 'project'])->name('project.index');
+Route::get('/projects', [HomeController::class, 'projects'])->name('project.index');
 Route::get('/services', [HomeController::class, 'services'])->name('services.index');
 Route::get('/quatation', [HomeController::class, 'quatation'])->name('quatation');

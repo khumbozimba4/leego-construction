@@ -68,7 +68,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
+                <a class="nav-link" href="{{ route('users') }}">
                     <span class="icon-bg"><i class="fa fa-money menu-icon"></i></span>
                     <span class="menu-title">Users </span>
                 </a>

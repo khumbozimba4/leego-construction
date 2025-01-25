@@ -4,10 +4,33 @@ namespace App\Http\Controllers;
 
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class MessageController extends Controller
 {
+
+    public function submitForm(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:15',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string',
+        ]);
+
+        $request->merge([
+            'phoneNumber' => $request->phone
+        ]);
+
+        Message::create($request->all());
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Message sent successfully!',
+        ]);
+    }
     // Display a list of messages
     public function index()
     {

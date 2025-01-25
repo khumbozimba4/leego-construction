@@ -62,12 +62,12 @@
                                     <td> {{ Str::limit($message->message, 50, '...') }} </td>
                                     <td> {{ $message->created_at->diffForHumans() }} </td>
                                     <td>
-                                        <a class="btn btn-primary" href="{{ route('messages.view', $message->id) }}">
+                                        <a class="btn btn-primary" href="{{ route('messages.show', $message->id) }}">
                                             View <i class="mdi mdi-arrow-right"></i>
                                         </a>
                                     </td>
                                     <td>
-                                        <form action="{{ route('messages.delete', $message->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this message?');">
+                                        <form action="{{ route('messages.destroy', $message->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this message?');">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">

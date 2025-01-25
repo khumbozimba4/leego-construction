@@ -155,12 +155,7 @@
                 <div class="flex flex-wrap mx-[-12px]">
                     <div class="w-6/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
                         <h2 class=" text-[28px] font-bold capitalize mb-5">about our history</h2>
-                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure praising pain was
-                            born and I will give you a complete account of the system, expound the actual teachings of the
-                            great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or
-                            avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue
-                            pleasure rationally encounter consequences are extremely painful. Nor again is there anyone who
-                            loves or pursues or desires to obtain pain of itselfBut I must explain to</p>
+                        <p>{{ $data['about_our_company_on_home_page'] }}</p>
                         <a href="{{route('about')}}"
                             class=" text-[#222222] text-[15px] font-semibold tracking-[1px] leading-[21px] uppercase px-5 py-2.5 border-0 font-OpenSans inline-block btn-type-5 mt-[30px]">about
                             more</a>

@@ -9,6 +9,11 @@
             </ol>
         </nav>
     </div>
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
     {{-- Customers TABLE --}}
     @if (session('feedback'))
         <div class="alert alert-success">

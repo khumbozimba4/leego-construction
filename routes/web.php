@@ -30,6 +30,7 @@ Route::get('/projects', action: [HomeController::class, 'projects'])->name('proj
 Route::get('/contact', action: [HomeController::class, 'contact'])->name('contact');
 Route::get('/quatation', action: [HomeController::class, 'quatation'])->name('quatation');
 Route::get('/services', action: [HomeController::class, 'services'])->name('services.index');
+Route::post('/contact/submit', [MessageController::class, 'submitForm'])->name('contact.submit');
 
 
 Route::get('/dashboard', function () {

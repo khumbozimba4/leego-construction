@@ -10,13 +10,6 @@
         </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}">
-                    <span class="icon-bg"><i class="fa fa-file menu-icon"></i></span>
-                    <span class="menu-title">Reports</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
                 <a class="nav-link" href="{{ route('projects.index') }}">
                     <span class="icon-bg"><i class="fa fa-user-circle menu-icon"></i></span>
 

@@ -17,12 +17,12 @@
                                 <div class="widget-stat card">
                                     <div class="card-body">
                                         <h4 class="card-title">Total Messages</h4>
-                                        <h3>MWK {{ number_format(20,2) }}</h3>
+                                        <h3>{{ number_format($data['messageCount']) }}</h3>
                                         <div class="progress mb-2">
                                             <div class="progress-bar progress-animated bg-primary"
-                                                style="width: {{ 20 }}%"></div>
+                                                style="width: {{ $data['messageCount'] }}%"></div>
                                         </div>
-                                        <small>MWK {{ number_format(20,2) }} </small>
+                                        <small>{{ number_format($data['messageCount']) }} </small>
                                     </div>
                                 </div>
                             </div>
@@ -31,14 +31,14 @@
                                 <div class="widget-stat card">
                                     <div class="card-body">
                                         <h4 class="card-title">Total Quatations</h4>
-                                        <h3>MWK {{ number_format(10, 2) }}</h3>
+                                        <h3>{{ number_format($data['totalQuotation']) }}</h3>
                                         <div class="progress mb-2">
-                                            <div class="progress-bar progress-animated @if (100 >= 90) bg-success
+                                            <div class="progress-bar progress-animated @if ($data['totalQuotation'] >= 90) bg-success
                                                 @else
                                                 bg-warning @endif"
-                                                style="width: {{ 10 }}%"></div>
+                                                style="width: {{ $data['totalQuotation'] }}%"></div>
                                         </div>
-                                        <small>MWK {{ number_format(10,2) }} </small>
+                                        <small>{{ number_format($data['totalQuotation']) }} </small>
                                     </div>
                                 </div>
                             </div>
@@ -47,12 +47,12 @@
                                 <div class="widget-stat card">
                                     <div class="card-body">
                                         <h4 class="card-title">Total Projects</h4>
-                                        <h3>MWK {{ number_format(9, 2) }}</h3>
+                                        <h3>{{ number_format($data['totalProjects']) }}</h3>
                                         <div class="progress mb-2">
                                             <div class="progress-bar progress-animated"
-                                                style="background-color:red;width: {{ 9 }}%"></div>
+                                                style="background-color:red;width: {{ $data['totalProjects'] }}%"></div>
                                         </div>
-                                        <small>MWK {{ number_format(9, 2) }} </small>
+                                        <small>{{ number_format($data['totalProjects']) }} </small>
                                     </div>
                                 </div>
                             </div>
@@ -62,13 +62,13 @@
                             <div class="col-xl-4 col-xxl-4 col-sm-6">
                                 <div class="widget-stat card">
                                     <div class="card-body">
-                                        <h4 class="card-title">Total Feedbacks</h4>
-                                        <h3>{{ 6 }}</h3>
+                                        <h4 class="card-title">Total Teams</h4>
+                                        <h3>{{ $data['totalTeams'] }}</h3>
                                         <div class="progress mb-2">
                                             <div class="progress-bar progress-animated bg-red"
-                                                style="width: {{ 6 }}%"></div>
+                                                style="width: {{ $data['totalTeams'] }}%"></div>
                                         </div>
-                                        <small>{{ 6 }}</small>
+                                        <small>{{ $data['totalTeams'] }}</small>
                                     </div>
                                 </div>
                             </div>
@@ -77,13 +77,27 @@
                             <div class="col-xl-4 col-xxl-4 col-sm-6">
                                 <div class="widget-stat card">
                                     <div class="card-body">
-                                        <h4 class="card-title">Total Invoice</h4>
-                                        <h3>MWK {{ number_format(100,2) }}</h3>
+                                        <h4 class="card-title">Total Users</h4>
+                                        <h3>{{ number_format($data['totalUser']) }}</h3>
                                         <div class="progress mb-2">
                                             <div class="progress-bar progress-animated bg-primary"
-                                                style="width: {{ 100 }}%"></div>
+                                                style="width: {{ $data['totalUser'] }}%"></div>
                                         </div>
-                                        <small>MWK {{ number_format(100,2) }} </small>
+                                        <small>{{ number_format($data['totalUser']) }} </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-xxl-4 col-sm-6">
+                                <div class="widget-stat card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Total Equipments</h4>
+                                        <h3>{{ number_format($data['totalEquipments']) }}</h3>
+                                        <div class="progress mb-2">
+                                            <div class="progress-bar progress-animated bg-primary"
+                                                style="width: {{ $data['totalEquipments'] }}%"></div>
+                                        </div>
+                                        <small>{{ number_format($data['totalEquipments']) }} </small>
                                     </div>
                                 </div>
                             </div>
@@ -200,7 +214,7 @@
                 //                 beginAtZero: true,
                 //                 ticks: {
                 //                     callback: function(value, index, values) {
-                //                         return 'MWK ' + value;
+                //                         return '' + value;
                 //                     }
                 //                 }
                 //             }

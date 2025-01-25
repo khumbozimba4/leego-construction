@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Classes\Notification;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,5 +21,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        view()->composer('dashboard', function ($view) {
+            $data = Notification::PrepareDashboard();
+            $view->with(['data' => $data]);
+        });
     }
 }

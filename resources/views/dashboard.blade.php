@@ -128,16 +128,16 @@
 
                 const data = {
                     labels: [
-                        'Target',
-                        'Collected',
-                        'Remaining'
+                        'Ongoing',
+                        'Completed',
+                        'Pending'
                     ],
                     datasets: [{
-                        label: 'Collected vs Remaining vs Target',
+                        label: 'Ongoing vs Completed vs Pending',
                         data: [
-                            {{ number_format((float)20, 2, '.', '') }},
-                            {{ number_format((float)10, 2, '.', '') }},
-                            {{ number_format((float)9, 2, '.', '') }}
+                            {{ number_format((int)$data['ProjectsInProgress'], 0, '.', '') }},
+                            {{ number_format((int)$data['completedProjects'], 0, '.', '') }},
+                            {{ number_format((int)$data['pendingProjects'], 0, '.', '') }}
 
                         ],
                         backgroundColor: [

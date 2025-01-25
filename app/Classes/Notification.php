@@ -30,6 +30,8 @@ class Notification
         $data = [];
         $data['messageCount'] = Message::count();
         $data['completedProjects'] = Project::where("status", "completed")->count();
+        $data['pendingProjects'] = Project::where("status", "pending")->count();
+        $data['ProjectsInProgress'] = Project::where("status", "ongoing")->count();
         $data['totalProjects'] = Project::count();
         $data['totalQuotation'] = Quotation::count();
         $data['totalTeams'] = Team::count();

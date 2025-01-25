@@ -1,4 +1,4 @@
-<div class="blocks-services-area text-center mb-[100px] mt-[-100px] wow fadeInUp z-[9] relative">
+<div class="blocks-services-area owl-carousel owl-theme text-center mb-[100px] mt-[-100px] wow fadeInUp z-[9] relative">
     <div class="container">
         <div class="flex flex-wrap mx-[-12px]">
             @foreach($services as $service)

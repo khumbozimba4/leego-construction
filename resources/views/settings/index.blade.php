@@ -67,7 +67,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <form action="{{ route('settings.delete', $setting->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this setting?');">
+                                        <form action="{{ route('settings.destroy', $setting->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this setting?');">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">

@@ -50,17 +50,6 @@
                             @enderror
                         </div>
 
-                        <div class="form-group col-md-6 col-lg-6">
-                            <label for="exampleInputName1">Phone Number</label>
-                            <input type="number" class="form-control" id="exampleInputName1" placeholder="Phone Number"
-                                name="phone_number" style="@error('phone_number')border:1px red solid;@enderror"
-                                value="{{ old('phone_number') }}">
-                            @error('phone_number')
-                                <div style="color: red;">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
 
                         <div class="form-group col-md-6 col-lg-6">
                             <label for="exampleInputPassword4">Password</label>
@@ -83,7 +72,7 @@
 
 
                     </div>
-                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <button type="submit" class="btn btn-primary me-2">Create User</button>
                 </form>
             </div>
         </div>

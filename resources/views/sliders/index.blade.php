@@ -60,9 +60,9 @@
                             @foreach ($sliders as $slider)
                                 <tr>
                                     <td>
-                                        @if ($slider->image)
-                                            <img src="{{ asset('storage/' . $slider->image) }}" alt="{{ $slider->title }}"
-                                                style="width: 100px; height: 50px; object-fit: cover;">
+                                        @if ($slider->photo)
+                                            <img src="{{ asset('storage/' . $slider->photo) }}" alt="{{ $slider->title }}"
+                                                style="width: 100px; height: 50px;">
                                         @else
                                             <span class="text-muted">No image</span>
                                         @endif

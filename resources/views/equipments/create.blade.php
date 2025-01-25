@@ -86,12 +86,12 @@
                             @enderror
                         </div>
 
-                        <!-- Photo -->
+                        <!-- image -->
                         <div class="form-group col-md-6">
-                            <label for="photo">Equipment Photo</label>
-                            <input type="file" class="form-control" id="photo" name="photo" accept="image/*"
-                                   style="@error('photo')border:1px red solid;@enderror" value="{{ old('photo') }}">
-                            @error('photo')
+                            <label for="image">Equipment Photo</label>
+                            <input type="file" class="form-control" id="image" name="image" accept="image/*"
+                                   style="@error('image')border:1px red solid;@enderror" value="{{ old('image') }}">
+                            @error('image')
                             <div style="color: red;">{{ $message }}</div>
                             @enderror
                         </div>

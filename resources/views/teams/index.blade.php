@@ -51,6 +51,7 @@
                             <th> Role </th>
                             <th> Image </th>
                             <th> Bio </th>
+                            <th> Experience </th>
                             <th> Created </th>
                             <th> Edit </th>
                             <th> More </th>
@@ -63,14 +64,15 @@
                                     <td> {{ $team->name }} </td>
                                     <td> {{ $team->role }} </td>
                                     <td>
-                                        @if ($team->image)
-                                            <img src="{{ asset('storage/' . $team->image) }}" alt="{{ $team->name }}"
+                                        @if ($team->photo)
+                                            <img src="{{ asset('Media/Teams/' . $team->photo) }}" alt="{{ $team->name }}"
                                                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%;">
                                         @else
                                             <span class="text-muted">No image</span>
                                         @endif
                                     </td>
-                                    <td> {{ $team->bio }} </td>
+                                    <td> {{ substr($team->description, 0, 35) }}.... </td>
+                                    <td> {{ $team->experience }} Year </td>
                                     <td> {{ $team->created_at->diffForHumans() }} </td>
                                     <td>
                                         <a class="btn btn-warning" href="{{ route('teams.edit', $team->id) }}">

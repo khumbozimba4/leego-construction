@@ -11,7 +11,14 @@ class Team extends Model
     protected $fillable = [
         'name',
         'role',
-        'image',
-        'bio',
+        'photo',
+        'description',
+        'experience',
+        'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

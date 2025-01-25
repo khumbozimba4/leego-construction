@@ -11,5 +11,12 @@ class Setting extends Model
     protected $fillable = [
         'key',
         'value',
+        'type',
+        'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

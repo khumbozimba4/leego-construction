@@ -58,9 +58,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     // Routes for Teams
     Route::get('/teams/search/', [TeamController::class, 'searchTeam'])->name('searchTeam');
+    Route::get('/teams/view/{id}', [TeamController::class, 'viewTeamMember'])->name('teams.view');
     Route::resource('teams', TeamController::class);
 
     // for slides
+    Route::get('/sliders/view/{id}', [SliderController::class, 'viewSlider'])->name('sliders.view');
     Route::get('/sliders/search/', [SliderController::class, 'searchSlider'])->name('searchSlider');
     Route::resource('sliders', SliderController::class);
 

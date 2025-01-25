@@ -25,7 +25,7 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'title' => 'nullable|string|max:255',
             'description' => 'nullable|string',
         ]);
@@ -33,8 +33,21 @@ class SliderController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
+        if ($request->hasFile('image')) {
+            // Now upload the image attachment
+            $team_image_file = $request->image;
 
-        Slider::create($request->all());
+            $image_filename = time() . '.' . $team_image_file->getClientOriginalExtension();
+
+            // Upload the image
+            $image_upload = $team_image_file->storeAs('public/sliders', $image_filename);
+            $request->merge([
+                "photo" => 'sliders/' . $image_filename // Store only the relative path
+            ]);
+        }
+
+
+        Slider::create($request->except('image'));
         return redirect()->route('sliders.index')->with('success', 'Slider created successfully!');
     }
 
@@ -56,7 +69,6 @@ class SliderController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'title' => 'nullable|string|max:255',
             'description' => 'nullable|string',
         ]);
@@ -65,8 +77,33 @@ class SliderController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
+        if ($request->hasFile('image')) {
+
+
+            $validator = Validator::make($request->all(), [
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            ]);
+
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors($validator)->withInput();
+            }
+
+
+            // Now upload the image attachment
+            $team_image_file = $request->image;
+
+            $image_filename = time() . '.' . $team_image_file->getClientOriginalExtension();
+
+            // Upload the image
+            $image_upload = $team_image_file->storeAs('public/sliders', $image_filename);
+
+            $request->merge([
+                "photo" => $image_filename
+            ]);
+        }
+
         $slider = Slider::findOrFail($id);
-        $slider->update($request->all());
+        $slider->update($request->except('image'));
         return redirect()->route('sliders.index')->with('success', 'Slider updated successfully!');
     }
 

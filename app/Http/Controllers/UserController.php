@@ -41,7 +41,6 @@ class UserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'phone_number' => ['required', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -52,12 +51,8 @@ class UserController extends Controller
 
             $user = User::create(array_merge(
                 $request->all(),
-                ['password' => Hash::make($request->password), 'picture' => 'picture']
-            ));
-
-
-            if ($user)
-                $user->addRole($request->role);
+                ['password' => Hash::make($request->password), 'status' => 'Active']
+            ));;
 
             DB::commit();
             return redirect()->back()->with('feedback', 'User added successfully!');

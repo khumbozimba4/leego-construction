@@ -17,5 +17,6 @@ class Quotation extends Model
         'total_price',
         'status',
         'expires_at',
+        'additional_notes'
     ];
 }

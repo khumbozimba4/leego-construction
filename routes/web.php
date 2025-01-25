@@ -28,9 +28,11 @@ Route::get('/', action: [HomeController::class, 'home'])->name('home');
 Route::get('/about', action: [HomeController::class, 'about'])->name('about');
 Route::get('/projects', action: [HomeController::class, 'projects'])->name('project.index');
 Route::get('/contact', action: [HomeController::class, 'contact'])->name('contact');
-Route::get('/quatation', action: [HomeController::class, 'quatation'])->name('quatation');
+Route::post('/quatation', action: [HomeController::class, 'quotation'])->name('quatation');
 Route::get('/services', action: [HomeController::class, 'services'])->name('services.index');
 Route::post('/contact/submit', [MessageController::class, 'submitForm'])->name('contact.submit');
+Route::get('services/{id}/add-to-cart', [HomeController::class, 'addToCart'])->name('product.addToCart');
+Route::get('services/{id}', [HomeController::class, 'show'])->name('product.show');
 
 
 Route::get('/dashboard', function () {

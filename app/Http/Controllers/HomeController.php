@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Equipment;
 use App\Models\Project;
+use App\Models\Quotation;
 use App\Models\Setting;
 use App\Models\Team;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -31,6 +34,54 @@ class HomeController extends Controller
 
         return view('welcome', compact('data'));
     }
+    public function addToCart($id)
+    {
+        $equip = Equipment::findOrFail($id);
+        return view('quotation', compact('equip'));
+    }
+    public function quotation(Request $request)
+    {
+
+        $request->validate([
+            'customer_name' => 'required|string|max:255',
+            'customer_contact' => 'required|email',
+            'phone' => 'required|string|max:15',
+            'equipment_details' => 'required|integer|exists:equipments,id',
+            'rental_start_date' => 'required|date|after_or_equal:today',
+            'rental_end_date' => 'required|date|after_or_equal:rental_start_date',
+        ]);
+
+        $existingItem = Equipment::findOrFail($request->equipment_details);
+        if (!$existingItem) {
+            return response()->json([
+                'isSuccessful' => false,
+                'message' => 'Target Equipment not found',
+            ]);
+        }
+        $startDate = Carbon::parse($request->rental_start_date);
+        $endDate = Carbon::parse($request->rental_end_date);
+
+        $total_days = $startDate->diffInDays($endDate);
+
+        $total_price = $existingItem->rental_price * $total_days;
+
+        $request->merge([
+            "customer_contact" => $request->customer_contact . ',' . $request->phone,
+            "rental_duration" => $total_days,
+            "status" => "pending",
+            "total_price" => $total_price,
+            "daily_rate" => $existingItem->rental_price
+        ]);
+
+        Quotation::create($request->all());
+
+        return response()->json([
+            'isSuccessful' => true,
+            'message' => 'Your rental request has been submitted successfully! Our team will contact you shortly.',
+        ]);
+    }
+
+
 
     public function projects()
     {
@@ -46,6 +97,7 @@ class HomeController extends Controller
     }
     public function services()
     {
-        return view('services');
+        $equipments = Equipment::all();
+        return view('services', compact('equipments'));
     }
 }

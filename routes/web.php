@@ -49,21 +49,28 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
 
     // for message
+    Route::get('/messages/search/', [MessageController::class, 'searchMessage'])->name('searchMessage');
     Route::resource('messages', MessageController::class);
 
     // Routes for Quotations
+    Route::get('/quotations/search/', [QuotationController::class, 'searchQuotation'])->name('searchQuotation');
     Route::resource('quotations', QuotationController::class);
 
     // Routes for Teams
+    Route::get('/teams/search/', [TeamController::class, 'searchTeam'])->name('searchTeam');
     Route::resource('teams', TeamController::class);
 
     // for slides
+    Route::get('/sliders/search/', [SliderController::class, 'searchSlider'])->name('searchSlider');
     Route::resource('sliders', SliderController::class);
 
     // for equipments
+    Route::get('/equipments/search/', [EquipmentController::class, 'searchEquipment'])->name('searchEquipment');
+
     Route::resource('equipments', EquipmentController::class);
 
     // for settings
+    Route::get('/settings/search/', [SettingController::class, 'searchSetting'])->name('searchSetting');
     Route::resource('settings', SettingController::class);
 
 

@@ -1,10 +1,6 @@
 <x-app-layout>
     <div class="page-header">
-        <a href="{{ route('quotations.new') }}">
-            <button class="btn btn-primary" type="button">
-                <i class="fa fa-plus"></i> New Quotation
-            </button>
-        </a>
+
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page">Quotations</li>

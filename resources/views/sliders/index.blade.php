@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="page-header">
-        <a href="{{ route('sliders.new') }}">
+        <a href="{{ route('sliders.create') }}">
             <button class="btn btn-primary" type="button">
                 <i class="fa fa-plus"></i> New Slider
             </button>

@@ -11,7 +11,7 @@ class TeamController extends Controller
     // Display a list of teams
     public function index()
     {
-        $teams = Team::all();
+        $teams = Team::paginate(10);
         return view('teams.index', compact('teams'));
     }
 

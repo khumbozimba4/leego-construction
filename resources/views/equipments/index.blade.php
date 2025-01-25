@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="page-header">
-        <a href="{{ route('equipments.new') }}">
+        <a href="{{ route('equipments.create') }}">
             <button class="btn btn-primary" type="button">
                 <i class="fa fa-plus"></i> New Equipment
             </button>

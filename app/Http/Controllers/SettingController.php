@@ -11,7 +11,7 @@ class SettingController extends Controller
     // Display a list of settings
     public function index()
     {
-        $settings = Setting::all();
+        $settings = Setting::paginate(10);
         return view('settings.index', compact('settings'));
     }
 

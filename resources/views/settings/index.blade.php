@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="page-header">
-        <a href="{{ route('settings.new') }}">
+        <a href="{{ route('settings.create') }}">
             <button class="btn btn-primary" type="button">
                 <i class="fa fa-plus"></i> New Setting
             </button>

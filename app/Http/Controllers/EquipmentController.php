@@ -11,7 +11,7 @@ class EquipmentController extends Controller
     // Display a list of equipment
     public function index()
     {
-        $equipments = Equipment::all();
+        $equipments = Equipment::paginate(10);
         return view('equipments.index', compact('equipments'));
     }
 

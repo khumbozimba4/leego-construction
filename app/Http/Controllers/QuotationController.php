@@ -12,7 +12,7 @@ class QuotationController extends Controller
     // Display a list of quotations
     public function index()
     {
-        $quotations = Quotation::all();
+        $quotations = Quotation::paginate(10);
         return view('quotations.index', compact('quotations'));
     }
 

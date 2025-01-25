@@ -11,7 +11,7 @@ class SliderController extends Controller
     // Display a list of sliders
     public function index()
     {
-        $sliders = Slider::all();
+        $sliders = Slider::paginate(10);
         return view('sliders.index', compact('sliders'));
     }
 

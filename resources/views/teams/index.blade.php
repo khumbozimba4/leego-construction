@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="page-header">
-        <a href="{{ route('teams.new') }}">
+        <a href="{{ route('teams.create') }}">
             <button class="btn btn-primary" type="button">
                 <i class="fa fa-plus"></i> New Team Member
             </button>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class TeamController extends Controller
@@ -84,9 +85,9 @@ class TeamController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
+        $team = Team::findOrFail($id);
 
         if ($request->hasFile('image')) {
-
             $validator = Validator::make($request->all(), [
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]);
@@ -95,19 +96,20 @@ class TeamController extends Controller
                 return redirect()->back()->withErrors($validator)->withInput();
             }
 
-            // now upload the receipt attachment
+            // Upload the new image
             $team_image_file = $request->image;
+            $image_filename = time() . '.' . $team_image_file->getClientOriginalExtension();
+            $image_upload = $team_image_file->storeAs('public/teams', $image_filename);
 
-            $receipt_filename = time() . '.' . $team_image_file->getClientOriginalExtension();
-            //upload
-            $image_upload = $team_image_file->storeAs('public/teams', $receipt_filename);
-            $request->merge([
-                "photo" => 'teams/' . $receipt_filename
-            ]);
+            // Delete the old photo from storage if it exists
+            if ($team->photo) {
+                Storage::disk('public')->delete($team->photo);
+            }
+
+            // Set the new photo
+            $request->merge(['photo' => 'teams/' . $image_filename]);
         }
 
-
-        $team = Team::findOrFail($id);
         $team->update($request->except('image'));
         return redirect()->route('teams.index')->with('success', 'Team updated successfully!');
     }

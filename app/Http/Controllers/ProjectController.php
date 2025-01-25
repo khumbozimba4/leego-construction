@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class ProjectController extends Controller
@@ -89,28 +90,31 @@ class ProjectController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
-        if ($request->hasFile('projectFile')) {
+        $project = Project::findOrFail($id);
 
+        if ($request->hasFile('image')) {
             $validator = Validator::make($request->all(), [
-                'projectFile' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]);
 
             if ($validator->fails()) {
                 return redirect()->back()->withErrors($validator)->withInput();
             }
-            // Now upload the image attachment
-            $team_image_file = $request->projectFile;
 
+            // Upload the new image
+            $team_image_file = $request->image;
             $image_filename = time() . '.' . $team_image_file->getClientOriginalExtension();
-
-            // Upload the image
             $image_upload = $team_image_file->storeAs('public/projects', $image_filename);
-            $request->merge([
-                "photo" => 'projects/' . $image_filename // Store only the relative path
-            ]);
+
+            // Delete the old photo from storage if it exists
+            if ($project->file) {
+                Storage::disk('public')->delete($project->file);
+            }
+
+            // Set the new photo
+            $request->merge(['file' => 'projects/' . $image_filename]);
         }
-        $project = Project::findOrFail($id);
-        $project->update($request->all());
+        $project->update($request->except('image'));
         return redirect()->route('projects.index')->with('success', 'Project updated successfully!');
     }
 

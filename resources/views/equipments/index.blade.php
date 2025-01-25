@@ -64,7 +64,7 @@
                                     <td> {{ $equipment->name }} </td>
                                     <td> {{ $equipment->serial_number }} </td>
                                     <td> {{ $equipment->description }} </td>
-                                    <td> ${{ number_format($equipment->rental_price, 2) }} </td>
+                                    <td> MWK{{ number_format($equipment->rental_price, 2) }} </td>
                                     <td>
                                         @if ($equipment->is_available)
                                             <span class="badge badge-success"><i class="fa fa-check-circle"></i> Available</span>

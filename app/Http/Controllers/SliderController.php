@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class SliderController extends Controller
@@ -77,9 +78,10 @@ class SliderController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
+        $slider = Slider::findOrFail($id);
+
+        // Handle file upload if a new photo is provided
         if ($request->hasFile('image')) {
-
-
             $validator = Validator::make($request->all(), [
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]);
@@ -88,24 +90,26 @@ class SliderController extends Controller
                 return redirect()->back()->withErrors($validator)->withInput();
             }
 
-
-            // Now upload the image attachment
+            // Upload the new image
             $team_image_file = $request->image;
-
             $image_filename = time() . '.' . $team_image_file->getClientOriginalExtension();
-
-            // Upload the image
             $image_upload = $team_image_file->storeAs('public/sliders', $image_filename);
 
-            $request->merge([
-                "photo" => $image_filename
-            ]);
+            // Delete the old photo from storage if it exists
+            if ($slider->photo) {
+                Storage::disk('public')->delete($slider->photo);
+            }
+
+            // Set the new photo
+            $request->merge(['photo' => 'sliders/' . $image_filename]);
         }
 
-        $slider = Slider::findOrFail($id);
+        // Update the slider record
         $slider->update($request->except('image'));
+
         return redirect()->route('sliders.index')->with('success', 'Slider updated successfully!');
     }
+
 
     // Delete slider
     public function destroy($id)

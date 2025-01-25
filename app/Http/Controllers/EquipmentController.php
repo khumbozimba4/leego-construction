@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Equipment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class EquipmentController extends Controller
@@ -90,8 +91,8 @@ class EquipmentController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
+        $equipment = Equipment::findOrFail($id);
         if ($request->hasFile('image')) {
-
             $validator = Validator::make($request->all(), [
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             ]);
@@ -99,19 +100,21 @@ class EquipmentController extends Controller
             if ($validator->fails()) {
                 return redirect()->back()->withErrors($validator)->withInput();
             }
-            // Now upload the image attachment
+
+            // Upload the new image
             $team_image_file = $request->image;
-
             $image_filename = time() . '.' . $team_image_file->getClientOriginalExtension();
-
-            // Upload the image
             $image_upload = $team_image_file->storeAs('public/equipments', $image_filename);
-            $request->merge([
-                "photo" => 'equipments/' . $image_filename // Store only the relative path
-            ]);
+
+            // Delete the old photo from storage if it exists
+            if ($equipment->photo) {
+                Storage::disk('public')->delete($equipment->photo);
+            }
+
+            // Set the new photo
+            $request->merge(['photo' => 'equipments/' . $image_filename]);
         }
 
-        $equipment = Equipment::findOrFail($id);
         $equipment->update($request->except('image'));
         return redirect()->route('equipments.index')->with('success', 'Equipment updated successfully!');
     }

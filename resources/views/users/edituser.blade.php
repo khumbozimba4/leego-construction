@@ -42,38 +42,8 @@
                          @enderror
                       </div>
 
-                      <div class="form-group col-md-6 col-lg-6">
-                        <label for="exampleInputName1">Phone Number</label>
-                        <input type="number" class="form-control" id="exampleInputName1" placeholder="Phone Number" name="phone_number" style="@error('phone_number')border:1px red solid;@enderror" value="{{ $user->phone_number }}">
-                        @error('phone_number')
-                            <div style="color: red;">
-                                {{ $message }}
-                            </div>
-                         @enderror
-                      </div>
-
-                   
-
-                      <div class="form-group col-md-6 col-lg-6">
-                        <label for="exampleInputName1">Role</label>
-                        <select class="form-control" name="role" style="@error('role')border:1px red solid;@enderror">
-                                <option value="{{$user->roles->first()->name}}">{{$user->roles->first()->display_name}}</option>
-                                <option value="admin">Admin</option>
-                                <option value="officer">Officer</option>
-                        </select>
-                        @error('role')
-                            <div style="color: red;">
-                                {{ $message }}
-                            </div>
-                         @enderror
-                      </div>
-
-                   
-
-                      
-                      
                     </div>
-                      <button type="submit" class="btn btn-primary me-2">Submit</button>
+                      <button type="submit" class="btn btn-primary me-2">Update User</button>
                     </form>
                   </div>
                 </div>

@@ -49,7 +49,11 @@
                         <tr>
                             <th> Project Name </th>
                             <th> Project Description </th>
-                            <th> File </th>
+                            <th> Client </th>
+                            <th> Budget </th>
+                            <th> Status </th>
+                            <th> Start Date </th>
+                            <th> End Date </th>
                             <th> Created </th>
                             <th> Edit </th>
                             <th> More </th>
@@ -61,14 +65,18 @@
                             @foreach ($projects as $project)
                                 <tr>
                                     <td> {{ $project->name }} </td>
-                                    <td> {{ $project->email }} </td>
-                                    <td> {{ $project->phone_number }} </td>
+                                    <td> {{ $project->description }} </td>
+                                    <td> {{ $project->client }} </td>
+                                    <td> MWK{{ number_format($project->budget, 2) }} </td>
+                                    <td> {{ $project->status }} </td>
+                                    <td> {{ $project->start_date }} </td>
+                                    <td> {{ $project->end_date }} </td>
                                     <td> {{ $project->created_at->diffForHumans() }} </td>
                                     <td> <a class="btn btn-warning"
-                                            href="{{ route('project.admin.edit', $project->id) }}"><i
+                                            href="{{ route('projects.edit', $project->id) }}"><i
                                             class="fa fa-edit"></i> Edit </a>
                                     </td>
-                                    <td> <a class="btn btn-primary" href="{{ route('project.admin.view', $project->id) }}">More
+                                    <td> <a class="btn btn-primary" href="{{ route('projects.show', $project->id) }}">More
                                             <i class="mdi mdi-arrow-right"></i> </a> </td>
                                 </tr>
                             @endforeach

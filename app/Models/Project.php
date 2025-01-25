@@ -16,7 +16,14 @@ class Project extends Model
         'start_date',
         'end_date',
         'status',
+        'user_id',
+        'client',
+        'budget',
+        'file',
     ];
 
-    // Define any relationships (if needed)
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

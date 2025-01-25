@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Equipment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class EquipmentController extends Controller
@@ -30,14 +31,15 @@ class EquipmentController extends Controller
             'serial_number' => 'required|string',
             'type' => 'nullable|string',
             'rental_price' => 'required|numeric|min:0',
-            'available' => 'required|boolean',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            'is_available' => 'required|boolean',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:5048',
         ]);
 
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
         if ($request->hasFile('image')) {
+
             // Now upload the image attachment
             $team_image_file = $request->image;
 
@@ -49,8 +51,15 @@ class EquipmentController extends Controller
                 "photo" => 'equipments/' . $image_filename // Store only the relative path
             ]);
         }
-
-        Equipment::create($request->except('image'));
+        $request->merge([
+            "user_id" => Auth::user()->id // Store only the relative path
+        ]);
+        try {
+            //code...
+            Equipment::create($request->except('image'));
+        } catch (\Throwable $th) {
+            dd($th->getMessage());
+        }
         return redirect()->route('equipments.index')->with('success', 'Equipment created successfully!');
     }
 
@@ -81,9 +90,29 @@ class EquipmentController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
+        if ($request->hasFile('image')) {
+
+            $validator = Validator::make($request->all(), [
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
+            ]);
+
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors($validator)->withInput();
+            }
+            // Now upload the image attachment
+            $team_image_file = $request->image;
+
+            $image_filename = time() . '.' . $team_image_file->getClientOriginalExtension();
+
+            // Upload the image
+            $image_upload = $team_image_file->storeAs('public/equipments', $image_filename);
+            $request->merge([
+                "photo" => 'equipments/' . $image_filename // Store only the relative path
+            ]);
+        }
 
         $equipment = Equipment::findOrFail($id);
-        $equipment->update($request->all());
+        $equipment->update($request->except('image'));
         return redirect()->route('equipments.index')->with('success', 'Equipment updated successfully!');
     }
 

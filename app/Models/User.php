@@ -52,4 +52,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Setting::class);
     }
+    public function equipments()
+    {
+        return $this->hasMany(Equipment::class);
+    }
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 }

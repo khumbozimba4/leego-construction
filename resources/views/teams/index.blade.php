@@ -80,7 +80,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-primary" href="{{ route('teams.view', $team->id) }}">
+                                        <a class="btn btn-primary" href="{{ route('teams.show', $team->id) }}">
                                             More <i class="mdi mdi-arrow-right"></i>
                                         </a>
                                     </td>

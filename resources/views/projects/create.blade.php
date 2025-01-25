@@ -81,6 +81,15 @@
                                     @enderror
                                 </div>
 
+                                <div class="form-group col-md-6 col-lg-6">
+                                    <label for="budget">Project Client</label>
+                                    <input type="text"  class="form-control" id="client" name="client"
+                                           placeholder="Enter Client" style="@error('client')border:1px red solid;@enderror" value="{{ old('client') }}">
+                                    @error('client')
+                                    <div style="color: red;">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
                                 <!-- Status -->
                                 <div class="form-group col-md-6 col-lg-6">
                                     <label for="status">Status</label>

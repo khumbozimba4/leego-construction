@@ -11,8 +11,15 @@ class Equipment extends Model
     protected $table = 'equipments';
     protected $fillable = [
         'name',
+        'serial_number',
         'description',
-        'daily_rate',
-        'available',
+        'rental_price',
+        'is_available',
+        'photo',
+        'user_id',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

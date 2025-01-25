@@ -48,6 +48,7 @@
                     <thead>
                         <tr>
                             <th> Name </th>
+                            <th> Serial Number </th>
                             <th> Description </th>
                             <th> Daily Rate </th>
                             <th> Available </th>
@@ -61,10 +62,11 @@
                             @foreach ($equipments as $equipment)
                                 <tr>
                                     <td> {{ $equipment->name }} </td>
+                                    <td> {{ $equipment->serial_number }} </td>
                                     <td> {{ $equipment->description }} </td>
-                                    <td> ${{ number_format($equipment->daily_rate, 2) }} </td>
+                                    <td> ${{ number_format($equipment->rental_price, 2) }} </td>
                                     <td>
-                                        @if ($equipment->available)
+                                        @if ($equipment->is_available)
                                             <span class="badge badge-success"><i class="fa fa-check-circle"></i> Available</span>
                                         @else
                                             <span class="badge badge-danger"><i class="fa fa-times-circle"></i> Not Available</span>
@@ -77,7 +79,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-primary" href="{{ route('equipments.view', $equipment->id) }}">
+                                        <a class="btn btn-primary" href="{{ route('equipments.show', $equipment->id) }}">
                                             More <i class="mdi mdi-arrow-right"></i>
                                         </a>
                                     </td>

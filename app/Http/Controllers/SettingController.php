@@ -40,7 +40,7 @@ class SettingController extends Controller
     // Show a single setting
     public function show($id)
     {
-        $setting = Setting::findOrFail($id);
+        $setting = Setting::with('user')->findOrFail($id);
         return view('settings.show', compact('setting'));
     }
 

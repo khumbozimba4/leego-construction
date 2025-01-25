@@ -76,7 +76,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-primary" href="{{ route('sliders.view', $slider->id) }}">
+                                        <a class="btn btn-primary" href="{{ route('sliders.show', $slider->id) }}">
                                             More <i class="mdi mdi-arrow-right"></i>
                                         </a>
                                     </td>

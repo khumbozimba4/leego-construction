@@ -31,7 +31,9 @@ class HomeController extends Controller
     {
         $data = [
             'about_our_company_on_home_page' => Setting::where('key', 'about_our_company_on_home_page')->value('value'),
-            'services' => Service::all()
+            'services' => Service::all(),
+            'projectsCount' => Project::count(),
+            'teamCount' => Team::count()
         ];
 
         return view('welcome', compact('data'));

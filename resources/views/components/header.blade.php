@@ -21,7 +21,7 @@
                             </div>
                             <div class="short-info text-[14px] capitalize text-[#777777] font-normal font-OpenSans">
                                 phone number:
-                                <h4 class="text-[14px] font-bold leading-[18px]">{{$data['primary_phone_number']}}</h4>
+                                <h4 class="text-[14px] font-bold leading-[18px]"> <a href="tel:{{$data['primary_phone_number']}}"> {{$data['primary_phone_number']}}</a></h4>
                             </div>
                         </li>
 
@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="short-info text-[14px]  text-[#777777] font-normal font-OpenSans">
                                     email address:
-                                    <h4 class="text-[14px] font-bold leading-[18px]">{{$data['primary_email_address']}}</h4>
+                                    <h4 class="text-[14px] font-bold leading-[18px]"> <a href="mailto:{{$data['primary_email_address']}}"> {{$data['primary_email_address']}} </a></h4>
                                 </div>
                             </li>
 

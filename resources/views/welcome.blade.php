@@ -161,7 +161,7 @@
                 <div
                     class="single-counter text-white px-0 py-10 border-2 border-solid border-[#ffab00] sm:mx-0 sm:my-[15px] sm:px-0 sm:py-[30px]">
                     <i class="fa fa-building text-[50px] block text-[#ffab00]"></i>
-                    <div class="counter font-bold text-[52px] leading-[52px] mx-0 my-[15px] font-Montserrat">350</div>
+                    <div class="counter font-bold text-[52px] leading-[52px] mx-0 my-[15px] font-Montserrat">{{$data["projectsCount"]}}</div>
                     <div class="count-name font-normal text-[17px] leading-6 capitalize font-OpenSans">construction projects completed</div>
                 </div>
             </div>
@@ -177,7 +177,7 @@
                 <div
                     class="single-counter text-white px-0 py-10 border-2 border-solid border-[#ffab00] sm:mx-0 sm:my-[15px] sm:px-0 sm:py-[30px]">
                     <i class="fa fa-users text-[50px] block text-[#ffab00]"></i>
-                    <div class="counter font-bold text-[52px] leading-[52px] mx-0 my-[15px] font-Montserrat">200</div>
+                    <div class="counter font-bold text-[52px] leading-[52px] mx-0 my-[15px] font-Montserrat">{{$data["teamCount"]}}</div>
                     <div class="count-name font-normal text-[17px] leading-6 capitalize font-OpenSans">skilled professionals on team</div>
                 </div>
             </div>

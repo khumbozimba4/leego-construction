@@ -18,40 +18,7 @@
 
 
 @section('services')
-
-<x-services-blocks :services="[
-    [
-        'image' => 'assets/img/blocks/blocks-1.jpg',
-        'title' => 'Welding Machine Using',
-        'description' => 'On the other hand, we denounce with righteous indignation...',
-        'url' => '#',
-    ],
-    [
-        'image' => 'assets/img/blocks/blocks-2.jpg',
-        'title' => 'New Compost Technology',
-        'description' => 'On the other hand, we denounce with righteous indignation...',
-        'url' => '#',
-    ],
-    [
-        'image' => 'assets/img/blocks/blocks-3.jpg',
-        'title' => 'New Welding Machine',
-        'description' => 'On the other hand, we denounce with righteous indignation...',
-        'url' => '#',
-    ],
-    [
-        'image' => 'assets/img/blocks/blocks-3.jpg',
-        'title' => 'New Welding Machine',
-        'description' => 'On the other hand, we denounce with righteous indignation...',
-        'url' => '#',
-    ],
-    [
-        'image' => 'assets/img/blocks/blocks-2.jpg',
-        'title' => 'New Compost Technology',
-        'description' => 'On the other hand, we denounce with righteous indignation...',
-        'url' => '#',
-    ],
-
-]" />
+<x-services-blocks  />
 
 @endsection
 
@@ -70,8 +37,7 @@
                                     class=" relative block before:content-[''] before:h-0.5 before:w-[44%] before:absolute before:top-2/4 before:inset-x-0 after:content-[''] after:h-0.5 after:w-[44%] after:absolute after:right-0 after:top-2/4 before:bg-[#222222] after:bg-[#222222]">
                                     <img src="assets/img/separ-logo.png" alt="separetor" class="m-[13px_auto]">
                                 </span>
-                                <p class=" text-[15px] text-[#363636]">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                    sed do eiusmod tempor ncc msm lal uFlaboreLorem ipsum dolor sit amet,</p>
+                                <p class=" text-[15px] text-[#363636]">We take pride in delivering exceptional civil construction and infrastructure projects. From roadworks to bridge construction, each project showcases our commitment to quality, precision, and innovation.</p>
                             </div>
                         </div>
                     </div>
@@ -168,16 +134,17 @@
                         <div class="about-slider-wraper owl-carousel owl-theme sm:mt-5">
                             <div
                                 class="about-single-item relative before:content-[''] before:absolute before:transition-[0.3s] before:duration-[all] before:inset-0 before:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)0%,rgba(2,2,0,0)1%,#222_100%)]">
-                                <img src="assets/img/about/about-1.jpg" alt="about-img" class="img-fluid" />
-                                <h4 class=" text-white absolute text-lg capitalize left-5 bottom-5">industrial experimental
-                                    technologies</h4>
+                                <img src="{{asset('assets/img/leego/bolamag.jpeg')}}"  alt="about-img" class="img-fluid" />
+                                <h4 class=" text-black absolute text-lg capitalize left-5 bottom-5">industrial proven
+                                    equipments</h4>
                             </div>
+
                             <div
-                                class="about-single-item relative before:content-[''] before:absolute before:transition-[0.3s] before:duration-[all] before:inset-0 before:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)0%,rgba(2,2,0,0)1%,#222_100%)]">
-                                <img src="assets/img/about/about-2.jpg" alt="about-img" class="img-fluid" />
-                                <h4 class=" text-white absolute text-lg capitalize left-5 bottom-5">industrial experimental
-                                    technologies</h4>
-                            </div>
+                            class="about-single-item relative before:content-[''] before:absolute before:transition-[0.3s] before:duration-[all] before:inset-0 before:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)0%,rgba(2,2,0,0)1%,#222_100%)]">
+                            <img src="{{asset('assets/img/leego/ncic.png')}}"  alt="about-img" class="img-fluid" />
+                            <h4 class=" text-black absolute text-lg capitalize left-5 bottom-1">Certified by the best</h4>
+                        </div>
+
                         </div>
                     </div>
                 </div>
@@ -260,8 +227,9 @@
                                 class=" relative block before:content-[''] before:h-0.5 before:w-[44%] before:absolute before:top-2/4 before:inset-x-0 after:content-[''] after:h-0.5 after:w-[44%] after:absolute after:right-0 after:top-2/4 before:bg-[#222222] after:bg-[#222222]">
                                 <img src="assets/img/separ-logo.png" alt="separetor" class="m-[13px_auto]">
                             </span>
-                            <p class=" text-[15px] text-[#363636]">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                sed do eiusmod tempor ncc msm lal uFlaboreLorem ipsum dolor sit amet,</p>
+                            <p class=" text-[15px] text-[#363636]">Our road construction expertise is unmatched, with a 100% commitment to quality and precision. From paving to equipment rentals, we deliver excellence in everything we do.
+
+                            </p>
                         </div>
                     </div>
                 </div>

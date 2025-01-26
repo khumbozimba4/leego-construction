@@ -42,10 +42,10 @@
 
                 </div>
             </div>
-            <div class="w-6/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
+            <div class="w-6/12 sm:mt-2.5 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
 
                 <div class="contact-info">
-                    <h2 class=" font-semibold leading-[30px] capitalize text-[30px]">Get In Touch</h2>
+                    <h2 class=" font-semibold leading-[30px]  capitalize text-[30px]">Get In Touch</h2>
                     <p class=" mx-0 my-5">We’d love to hear from you! Whether you have a question, need assistance, or want to discuss your project, feel free to reach out. Our team is here to help and ensure your needs are met. Let's connect today!</p>
                     <form class="contact-form" id="ajax-contact" action="{{ route('contact.submit') }}" method="post">
                         @csrf

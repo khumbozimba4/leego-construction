@@ -4,7 +4,8 @@
     @foreach($services as $service)
     <div class="single-blocks-services group sm:mb-5">
         <div class="single-blocks-img relative before:content-[''] before:absolute before:rounded-[5px]  before:inset-2.5">
-            <img src="{{ $service['image'] }}" alt="" class="img-fluid w-full rounded-[5px]" />
+            <img src="{{ asset('storage/'.$service['photo']) }}" alt="" class="img-fluid w-full rounded-[5px]"     style="width: 900px; height: 300px;"
+            />
         </div>
         <h3>
             <a class="text-lg font-semibold capitalize block mt-[15px] font-Montserrat" href="{{ $service['url'] }}">

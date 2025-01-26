@@ -60,4 +60,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Project::class);
     }
+    public function services()
+    {
+        return $this->hasMany(Service::class);
+    }
 }

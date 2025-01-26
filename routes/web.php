@@ -6,6 +6,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\QuotationController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TeamController;
@@ -58,6 +59,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     // Routes for Quotations
     Route::get('/quotations/search/', [QuotationController::class, 'searchQuotation'])->name('searchQuotation');
     Route::resource('quotations', QuotationController::class);
+
+
+    // Routes for services
+    Route::get('/services/search/', [ServiceController::class, 'searchQuotation'])->name('searchServices');
+    Route::resource('services', ServiceController::class);
 
     // Routes for Teams
     Route::get('/teams/search/', [TeamController::class, 'searchTeam'])->name('searchTeam');

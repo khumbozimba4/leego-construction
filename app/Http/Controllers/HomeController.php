@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Equipment;
 use App\Models\Project;
 use App\Models\Quotation;
+use App\Models\Service;
 use App\Models\Setting;
 use App\Models\Team;
 use Carbon\Carbon;
@@ -30,6 +31,7 @@ class HomeController extends Controller
     {
         $data = [
             'about_our_company_on_home_page' => Setting::where('key', 'about_our_company_on_home_page')->value('value'),
+            'services' => Service::all()
         ];
 
         return view('welcome', compact('data'));

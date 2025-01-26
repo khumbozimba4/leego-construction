@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Service;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -10,15 +11,15 @@ class ServicesBlocks extends Component
 {
     public $services;
 
-    public function __construct(array $services)
+    public function __construct()
     {
-        $this->services = $services;
+        $this->services = Service::all();
     }
     /**
      * Get the view / contents that represent the component.
      */
     public function render(): View|Closure|string
     {
-        return view('components.services-blocks');
+        return view('components.services-blocks', ['services' => $this->services]);
     }
 }

@@ -32,47 +32,47 @@
     /*----------------------------
     		hero Slider Active
     	------------------------------*/
-    $(".tractor-main-slider").owlCarousel({
-        loop: true,
-        autoplay: true,
-        animateOut: "slideOutDown",
-        animateIn: "bounceIn",
-        dots: false,
-        nav: true,
-        navText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>",
-        ],
-        responsive: {
-            0: {
-                items: 1,
-            },
-            600: {
-                items: 1,
-            },
-            1000: {
-                items: 1,
-            },
-        },
-    });
+    // $(".tractor-main-slider").owlCarousel({
+    //     loop: true,
+    //     autoplay: true,
+    //     animateOut: "slideOutDown",
+    //     animateIn: "bounceIn",
+    //     dots: false,
+    //     nav: true,
+    //     navText: [
+    //         "<i class='fa fa-angle-left'></i>",
+    //         "<i class='fa fa-angle-right'></i>",
+    //     ],
+    //     responsive: {
+    //         0: {
+    //             items: 1,
+    //         },
+    //         600: {
+    //             items: 1,
+    //         },
+    //         1000: {
+    //             items: 1,
+    //         },
+    //     },
+    // });
 
-    $(".tractor-main-slider").on("translate.owl.carousel", function () {
-        $(".tractor-single-slider h1, .tractor-single-slider p")
-            .removeClass("animated fadeInUp")
-            .css("opacity", "0");
-        $(".tractor-single-slider .btnl")
-            .removeClass("animated fadeInDown")
-            .css("opacity", "0");
-    });
+    // $(".tractor-main-slider").on("translate.owl.carousel", function () {
+    //     $(".tractor-single-slider h1, .tractor-single-slider p")
+    //         .removeClass("animated fadeInUp")
+    //         .css("opacity", "0");
+    //     $(".tractor-single-slider .btnl")
+    //         .removeClass("animated fadeInDown")
+    //         .css("opacity", "0");
+    // });
 
-    $(".tractor-main-slider").on("translated.owl.carousel", function () {
-        $(".tractor-single-slider h1, .tractor-single-slider p")
-            .addClass("animated fadeInUp")
-            .css("opacity", "1");
-        $(".tractor-single-slider .btnl")
-            .addClass("animated fadeInDown")
-            .css("opacity", "1");
-    });
+    // $(".tractor-main-slider").on("translated.owl.carousel", function () {
+    //     $(".tractor-single-slider h1, .tractor-single-slider p")
+    //         .addClass("animated fadeInUp")
+    //         .css("opacity", "1");
+    //     $(".tractor-single-slider .btnl")
+    //         .addClass("animated fadeInDown")
+    //         .css("opacity", "1");
+    // });
 
     /*----------------------------
      		about Slider Active

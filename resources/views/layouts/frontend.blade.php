@@ -28,6 +28,7 @@
           </head>
   <body>
 
+
     <div class="tractour-loader h-full fixed w-full z-[9999] bg-white bg-no-repeat bg-scroll bg-[0_0]">
         <div class="main-preloader absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4">
             <div class="spinner w-10 h-10 relative">
@@ -104,3 +105,4 @@
     @yield('scripts')
   </body>
 </html>
+

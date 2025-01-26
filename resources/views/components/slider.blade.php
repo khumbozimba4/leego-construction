@@ -1,5 +1,5 @@
 <div class="slider-area">
-    <div class="tractor-main-slider owl-carousel owl-theme">
+    <div class="tractor-main-slider">
         @foreach($slides as $slide)
             <div
                 class="tractor-single-slider bg-[center_center] bg-cover text-white h-[700px] relative before:content-[''] before:w-full before:h-full before:absolute before:left-0 before:top-0 before:bg-[linear-gradient(to_right,rgba(0,0,0,0.87)0%,rgba(0,0,0,0.87)50%,rgba(0,0,0,0)100%)] z-[1] before:z-[-1]"

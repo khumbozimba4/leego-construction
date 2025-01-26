@@ -32,47 +32,47 @@
     /*----------------------------
     		hero Slider Active
     	------------------------------*/
-    $(".tractor-main-slider").owlCarousel({
-        loop: true,
-        autoplay: true,
-        animateOut: "slideOutDown",
-        animateIn: "flipInX",
-        dots: false,
-        nav: true,
-        navText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>",
-        ],
-        responsive: {
-            0: {
-                items: 1,
-            },
-            600: {
-                items: 1,
-            },
-            1000: {
-                items: 1,
-            },
-        },
-    });
+    // $(".tractor-main-slider").owlCarousel({
+    //     loop: true,
+    //     autoplay: true,
+    //     animateOut: "slideOutDown",
+    //     animateIn: "flipInX",
+    //     dots: false,
+    //     nav: true,
+    //     navText: [
+    //         "<i class='fa fa-angle-left'></i>",
+    //         "<i class='fa fa-angle-right'></i>",
+    //     ],
+    //     responsive: {
+    //         0: {
+    //             items: 1,
+    //         },
+    //         600: {
+    //             items: 1,
+    //         },
+    //         1000: {
+    //             items: 1,
+    //         },
+    //     },
+    // });
 
-    $(".tractor-main-slider").on("translate.owl.carousel", function () {
-        $(".tractor-single-slider h1, .tractor-single-slider p")
-            .removeClass("animated fadeInUp")
-            .css("opacity", "0");
-        $(".tractor-single-slider .btnl")
-            .removeClass("animated fadeInDown")
-            .css("opacity", "0");
-    });
+    // $(".tractor-main-slider").on("translate.owl.carousel", function () {
+    //     $(".tractor-single-slider h1, .tractor-single-slider p")
+    //         .removeClass("animated fadeInUp")
+    //         .css("opacity", "0");
+    //     $(".tractor-single-slider .btnl")
+    //         .removeClass("animated fadeInDown")
+    //         .css("opacity", "0");
+    // });
 
-    $(".tractor-main-slider").on("translated.owl.carousel", function () {
-        $(".tractor-single-slider h1, .tractor-single-slider p")
-            .addClass("animated fadeInUp")
-            .css("opacity", "1");
-        $(".tractor-single-slider .btnl")
-            .addClass("animated fadeInDown")
-            .css("opacity", "1");
-    });
+    // $(".tractor-main-slider").on("translated.owl.carousel", function () {
+    //     $(".tractor-single-slider h1, .tractor-single-slider p")
+    //         .addClass("animated fadeInUp")
+    //         .css("opacity", "1");
+    //     $(".tractor-single-slider .btnl")
+    //         .addClass("animated fadeInDown")
+    //         .css("opacity", "1");
+    // });
 
     /*----------------------------
      		about Slider Active
@@ -208,11 +208,14 @@
         },
     });
 
-    $(".blocks-services-area").owlCarousel({
-        loop: true,
-        autoplay: true,
-        smartSpeed: 1000,
-        dots: false,
+    $(".owl-carousel-services").owlCarousel({
+        loop: true, // Enables infinite looping
+        margin: 20, // Spacing between items
+        nav: true, // Adds navigation arrows
+        dots: false, // Adds pagination dots
+        autoplay: true, // Enables auto-sliding
+        autoplayTimeout: 3000, // Auto-slide interval
+        autoplayHoverPause: true, // Pauses on hover
         nav: true,
         navText: [
             "<i class='fa fa-angle-left '></i>",
@@ -220,16 +223,17 @@
         ],
         responsive: {
             0: {
-                items: 1,
+                items: 1, // Show 1 item on small screens (mobile)
             },
-            600: {
-                items: 1,
+            768: {
+                items: 2, // Show 2 items on medium screens (tablets)
             },
-            1000: {
-                items: 1,
+            1024: {
+                items: 3, // Show 3 items on large screens (desktop)
             },
         },
     });
+
     /*----------------------------
        		project Slider Active
        	------------------------------*/

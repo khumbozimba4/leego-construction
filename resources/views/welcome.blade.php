@@ -6,19 +6,10 @@
     <x-slider :slides="[
         [
             'image' => 'assets/img/leego/bomag-horizontal.webp',
-            'title' => 'malume',
+            'title' => 'Leego Construction',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'buttons' => [
-                ['url' => '#', 'label' => 'Our Services', 'type' => 'btn-type-1'],
-                ['url' => '#', 'label' => 'Purchase Now', 'type' => 'btn-type-2'],
-            ],
-        ],
-        [
-            'image' => 'assets/img/slider/slider-2.jpg',
-            'title' => 'malume',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'buttons' => [
-                ['url' => '#', 'label' => 'Our Services', 'type' => 'btn-type-1'],
+                ['url' => url('/services'), 'label' => 'Our Services', 'type' => 'btn-type-1'],
                 ['url' => '#', 'label' => 'Purchase Now', 'type' => 'btn-type-2'],
             ],
         ],
@@ -47,7 +38,18 @@
         'description' => 'On the other hand, we denounce with righteous indignation...',
         'url' => '#',
     ],
-
+    [
+        'image' => 'assets/img/blocks/blocks-3.jpg',
+        'title' => 'New Welding Machine',
+        'description' => 'On the other hand, we denounce with righteous indignation...',
+        'url' => '#',
+    ],
+    [
+        'image' => 'assets/img/blocks/blocks-2.jpg',
+        'title' => 'New Compost Technology',
+        'description' => 'On the other hand, we denounce with righteous indignation...',
+        'url' => '#',
+    ],
 
 ]" />
 
@@ -225,131 +227,8 @@
 </div>
 
 
-<!-- counter area end -->
-        <!-- services area start -->
-        <div class="services-area p-[100px_0] text-center">
-            <div class="container">
-                <div class="flex flex-wrap mx-[-12px]">
-                    <div class="w-4/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
-                        <div
-                            class="single-services-wraper flex items-center justify-center cursor-pointer px-0 py-[15px] sm:border-0 group  border-b-[1px] border-solid border-[#dee2e6] ">
-                            <div
-                                class="services-icon -rotate-45 border transition-all duration-[0.3s] border-solid border-[#e6e6e6] group-hover:bg-[#222]">
-                                <i
-                                    class="flaticon-oil text-[28px] w-[50px] h-[50px] inline-block text-center leading-[50px] rotate-45 text-[#ffab00]"></i>
-                            </div>
-                            <div class="services-content text-left ml-[30px]">
-                                <h4 class="text-[18px] font-semibold capitalize mb-[15px]">energy & utilities</h4>
-                                <p class=" text-[#363636]">I must explain to you how this idea of denouncing pleasure and
-                                    praising</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-4/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
-                        <div
-                            class="single-services-wraper flex items-center justify-center cursor-pointer px-0 py-[15px] sm:border-0 group  border-b-[1px] border-solid border-[#dee2e6]">
-                            <div
-                                class="services-icon -rotate-45 border transition-all duration-[0.3s] border-solid border-[#e6e6e6] group-hover:bg-[#222]">
-                                <i
-                                    class="flaticon-internet text-[28px] w-[50px] h-[50px] inline-block text-center leading-[50px] rotate-45 text-[#ffab00]"></i>
-                            </div>
-                            <div class="services-content text-left ml-[30px]">
-                                <h4 class="text-[18px] font-semibold capitalize mb-[15px]">internet of things</h4>
-                                <p class=" text-[#363636]">I must explain to you how this idea of denouncing pleasure and
-                                    praising</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-4/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
-                        <div
-                            class="single-services-wraper flex items-center justify-center cursor-pointer px-0 py-[15px] sm:border-0 group  border-b-[1px] border-solid border-[#dee2e6]">
-                            <div
-                                class="services-icon -rotate-45 border transition-all duration-[0.3s] border-solid border-[#e6e6e6] group-hover:bg-[#222]">
-                                <i
-                                    class="flaticon-chip text-[28px] w-[50px] h-[50px] inline-block text-center leading-[50px] rotate-45 text-[#ffab00]"></i>
-                            </div>
-                            <div class="services-content text-left ml-[30px]">
-                                <h4 class="text-[18px] font-semibold capitalize mb-[15px]">artificial intelligence</h4>
-                                <p class=" text-[#363636]">I must explain to you how this idea of denouncing pleasure and
-                                    praising</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-wrap mx-[-12px]">
-                    <div class="w-4/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
-                        <div
-                            class="single-services-wraper flex items-center justify-center cursor-pointer px-0 py-[15px] sm:border-b-[none] group">
-                            <div
-                                class="services-icon -rotate-45 border transition-all duration-[0.3s] border-solid border-[#e6e6e6] group-hover:bg-[#222]">
-                                <i
-                                    class="flaticon-atom text-[28px] w-[50px] h-[50px] inline-block text-center leading-[50px] rotate-45 text-[#ffab00]"></i>
-                            </div>
-                            <div class="services-content text-left ml-[30px]">
-                                <h4 class="text-[18px] font-semibold capitalize mb-[15px]">worldwide provider</h4>
-                                <p class=" text-[#363636]">I must explain to you how this idea of denouncing pleasure and
-                                    praising</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-4/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
-                        <div
-                            class="single-services-wraper flex items-center justify-center cursor-pointer px-0 py-[15px] sm:border-b-[none] group">
-                            <div
-                                class="services-icon -rotate-45 border transition-all duration-[0.3s] border-solid border-[#e6e6e6] group-hover:bg-[#222]">
-                                <i
-                                    class="flaticon-medal text-[28px] w-[50px] h-[50px] inline-block text-center leading-[50px] rotate-45 text-[#ffab00]"></i>
-                            </div>
-                            <div class="services-content text-left ml-[30px]">
-                                <h4 class="text-[18px] font-semibold capitalize mb-[15px]">25+ best company awards</h4>
-                                <p class=" text-[#363636]">I must explain to you how this idea of denouncing pleasure and
-                                    praising</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-4/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
-                        <div
-                            class="single-services-wraper flex items-center justify-center cursor-pointer px-0 py-[15px] sm:border-b-[none] group">
-                            <div
-                                class="services-icon -rotate-45 border transition-all duration-[0.3s] border-solid border-[#e6e6e6] group-hover:bg-[#222]">
-                                <i
-                                    class="flaticon-idea text-[28px] w-[50px] h-[50px] inline-block text-center leading-[50px] rotate-45 text-[#ffab00]"></i>
-                            </div>
-                            <div class="services-content text-left ml-[30px]">
-                                <h4 class="text-[18px] font-semibold capitalize mb-[15px]">best idea for evar</h4>
-                                <p class=" text-[#363636]">I must explain to you how this idea of denouncing pleasure and
-                                    praising</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="index.html#"
-                class=" text-[#222222] text-[15px] font-semibold tracking-[1px] leading-[21px] uppercase px-5 py-2.5 border-0 font-OpenSans inline-block btn-type-3 mt-[30px]">see
-                more <i class="fa fa-long-arrow-right"></i>
-            </a>
-        </div>
-        <!-- services area end -->
-        <!-- call to action area start -->
-        <div
-            class="callto-action-area p-[100px_0] cta-bg bg-[center_center] bg-cover bg-fixed relative h-full bg-[url(assets/img/cta/cta-bg.jpg)] before:content-[''] before:absolute before:w-full before:h-full before:opacity-90 before:left-0 before:top-0 before:!bg-black z-[1] before:z-[-1]">
-            <div class="container relative">
-                <div class="flex flex-wrap mx-[-12px]">
-                    <div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-                        <div class="callto-action-content float-left">
-                            <h3 class=" text-[36px] text-white font-semibold md:text-[25px] ">Looking for a reliable &
-                                stable partner?</h3>
-                            <p class=" text-[16px] uppercase text-white mt-5 md:mt-2.5 ">contact us & learn more about us
-                            </p>
-                        </div>
-                        <a href="index.html#"
-                            class=" text-[#222222] text-[15px] font-semibold tracking-[1px] leading-[21px] uppercase px-5 py-2.5 border-0 font-OpenSans inline-block btn-type-4 float-right mx-0 my-5 sm:float-none ">contact
-                            us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- call to action area end -->
+
+
 
         <!-- quote sologan area start -->
         <div class="quote-sologan-area p-[100px_0] text-center  !bg-[#fbfbfb] ">
@@ -449,59 +328,30 @@
             </div>
         </div>
         <!-- progress and tab area end -->
-        <!-- testimonial area start -->
-        <div
-            class="testimonial-area p-[100px_0] text-center testimonial-bg bg-[center_center] bg-cover bg-fixed relative bg-[url(assets/img/testimonial/testimonial-bg.jpg)] before:content-[''] before:absolute before:w-full before:h-full before:opacity-[0.90] before:left-0 before:top-0 before:!bg-black">
-            <div class="container">
-                <div class="flex flex-wrap mx-[-12px]">
-                    <div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-                        <div class="all-testimonial-wraper owl-carousel owl-theme">
-                            <div class="single-testimonial">
-                                <div
-                                    class="client-message relative w-3/5 block mx-auto my-0 p-[30px] rounded-[10px] after:content-[''] after:w-0 after:h-0 after:absolute after:-ml-5 after:border-t-[20px] after:border-t-[white] after:border-x-[20px] after:border-x-transparent after:border-solid after:left-2/4 after:-bottom-5 bg-white">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod you a tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip</p>
-                                </div>
-                                <div class="client-img inline-block w-[114px] h-auto mt-10 mb-5 mx-0">
-                                    <img src="assets/img/testimonial/test-thm-1.png" alt=""
-                                        class="img-fluid rounded-[50%] border-[10px] border-solid border-white" />
-                                </div>
-                                <div class="client-title">
-                                    <h3
-                                        class=" text-[20px] leading-[22px] text-white capitalize font-semibold font-Montserrat">
-                                        michael david</h3>
-                                    <h5
-                                        class=" text-[15px] leading-[25px] text-white font-normal tracking-[2px] font-OpenSansserif">
-                                        engineer</h5>
-                                </div>
-                            </div>
-                            <div class="single-testimonial">
-                                <div
-                                    class="client-message relative w-3/5 block mx-auto my-0 p-[30px] rounded-[10px] after:content-[''] after:w-0 after:h-0 after:absolute after:-ml-5 after:border-t-[20px] after:border-t-[white] after:border-x-[20px] after:border-x-transparent after:border-solid after:left-2/4 after:-bottom-5 bg-white">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod you a tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip</p>
-                                </div>
-                                <div class="client-img inline-block w-[114px] h-auto mt-10 mb-5 mx-0">
-                                    <img src="assets/img/testimonial/test-thm-2.jpg" alt=""
-                                        class="img-fluid rounded-[50%] border-[10px] border-solid border-white" />
-                                </div>
-                                <div class="client-title">
-                                    <h3
-                                        class=" text-[20px] leading-[22px] text-white capitalize font-semibold font-Montserrat">
-                                        david marth</h3>
-                                    <h5
-                                        class=" text-[15px] leading-[25px] text-white font-normal tracking-[2px] font-OpenSansserif">
-                                        ceo</h5>
-                                </div>
-                            </div>
-                        </div>
+          <!-- call to action area start -->
+          <div
+          class="callto-action-area p-[100px_0] cta-bg bg-[center_center] bg-cover bg-fixed relative h-full bg-[url(assets/img/cta/cta-bg.jpg)] before:content-[''] before:absolute before:w-full before:h-full before:opacity-90 before:left-0 before:top-0 before:!bg-black z-[1] before:z-[-1]">
+          <div class="container relative">
+              <div class="flex flex-wrap mx-[-12px]">
+                <div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
+                    <div class="callto-action-content float-left">
+                        <h3 class="text-[36px] text-white font-semibold md:text-[25px]">
+                            Building Your Vision, Strengthening Your Future
+                        </h3>
+                        <p class="text-[16px] uppercase text-white mt-5 md:mt-2.5">
+                            Partner with us for dependable civil construction and equipment rental solutions
+                        </p>
                     </div>
+                    <a href="{{route('contact')}}"
+                        class="text-[#222222] text-[15px] font-semibold tracking-[1px] leading-[21px] uppercase px-5 py-2.5 border-0 font-OpenSans inline-block btn-type-4 float-right mx-0 my-5 sm:float-none">
+                        contact us
+                    </a>
                 </div>
-            </div>
-        </div>
-        <!-- testimonial area end -->
+
+              </div>
+          </div>
+      </div>
+      <!-- call to action area end -->
 
         <!-- client slider area start -->
 
@@ -558,3 +408,4 @@
         </div>
 
 @endsection
+

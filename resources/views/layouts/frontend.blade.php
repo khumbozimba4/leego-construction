@@ -51,7 +51,7 @@
         <x-main-menu :menu-items="[
             ['label' => 'Home', 'url' => route('home'), 'active' => request()->routeIs('home')],
             ['label' => 'Projects', 'url' => route('project.index'), 'active' => request()->routeIs('project.*')],
-            ['label' => 'Equipments', 'url' => route('services.index'), 'active' => request()->routeIs('services.*')],
+            ['label' => 'Equipments', 'url' => route('frontend.services.index'), 'active' => request()->routeIs('services.*')],
             ['label' => 'About Us', 'url' => route('about'), 'active' => request()->routeIs('about')],
             ['label' => 'Contact Us', 'url' => route('contact'), 'active' => request()->routeIs('contact')],
         ]" />

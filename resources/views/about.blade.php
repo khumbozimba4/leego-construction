@@ -95,7 +95,7 @@
                                 class="member-title py-2.5 border transition-all duration-[0.3s] border-solid border-[#efefef]">
                                 <h3>
                                     <a class=" capitalize text-[20px] font-semibold text-[#222] font-OpenSansserif"
-                                        href="index.html#">{{$item->name}}</a>
+                                        href="#">{{$item->name}}</a>
                                 </h3>
                                 <a class=" text-[15px] text-[#777777] font-normal font-OpenSans"
                                     href="mailto:info@rob.com">Experience: {{$item->experience}} Years</a>

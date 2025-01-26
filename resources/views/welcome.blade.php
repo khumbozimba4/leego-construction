@@ -6,11 +6,11 @@
     <x-slider :slides="[
         [
             'image' => 'assets/img/leego/bomag-horizontal.webp',
-            'title' => 'Leego Construction',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'title' => 'Best Quality Construction & Equipment Rental Services',
+            'description' => 'Delivering excellence in construction and equipment services for every job.',
             'buttons' => [
                 ['url' => url('/services'), 'label' => 'Our Services', 'type' => 'btn-type-1'],
-                ['url' => '#', 'label' => 'Purchase Now', 'type' => 'btn-type-2'],
+                ['url' => url('/contact'), 'label' => 'Hire Us', 'type' => 'btn-type-2'],
             ],
         ],
     ]" />
@@ -56,7 +56,7 @@
                                 <div class="blog-content pt-[15px] pb-[30px] px-[15px]">
                                     <h3>
                                         <a class=" text-[20px] leading-[30px] font-semibold text-[#222222] capitalize font-Montserrat"
-                                            href="index.html#">industrial revolution factory</a>
+                                            href="#">industrial revolution factory</a>
                                     </h3>
                                     <span class=" w-[100px] h-[5px] block mx-0 my-3 bg-[#ffab00]"></span>
                                     <p class=" text-[15px] text-[#363636]">industry. Lorem Ipsum has been the ever a industry
@@ -77,7 +77,7 @@
                                 <div class="blog-content pt-[15px] pb-[30px] px-[15px]">
                                     <h3>
                                         <a class=" text-[20px] leading-[30px] font-semibold text-[#222222] capitalize font-Montserrat"
-                                            href="index.html#">our genius engineer</a>
+                                            href="#">our genius engineer</a>
                                     </h3>
                                     <span class=" w-[100px] h-[5px] block mx-0 my-3 bg-[#ffab00]"></span>
                                     <p class=" text-[15px] text-[#363636]">industry. Lorem Ipsum has been the ever a industry
@@ -98,7 +98,7 @@
                                 <div class="blog-content pt-[15px] pb-[30px] px-[15px]">
                                     <h3>
                                         <a class=" text-[20px] leading-[30px] font-semibold text-[#222222] capitalize font-Montserrat"
-                                            href="index.html#">technical solution consultant</a>
+                                            href="#">technical solution consultant</a>
                                     </h3>
                                     <span class="w-[100px] h-[5px] block mx-0 my-3 bg-[#ffab00]"></span>
                                     <p class=" text-[15px] text-[#363636]">industry. Lorem Ipsum has been the ever a industry
@@ -204,7 +204,7 @@
                     <div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
                         <h2 class=" text-[40px] font-bold capitalize leading-[50px] font-Montserrat">Building Infrastructure, Empowering Growth..</h2>
                         <p class="text-[18px] w-[70%] text-[#363636] mt-[25px] mb-0 mx-auto md:w-3/5 sm:w-full">We specialize in road construction, pothole repairs, culvert installations, bridge construction, and road reshaping using both labor-based and machinery-driven methods. Additionally, we provide equipment rental services, including machines like BOMAG rollers, to support your construction needs</p>
-                        <a href="{{route('quatation')}}"
+                        <a href="{{route('frontend.services.index')}}"
                             class=" text-[#222222] text-[15px] font-semibold tracking-[1px] leading-[21px] uppercase px-5 py-2.5 border-0 font-OpenSans inline-block btn-type-3 mt-[30px]">get
                             a quote</a>
                     </div>

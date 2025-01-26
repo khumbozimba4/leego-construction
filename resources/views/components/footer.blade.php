@@ -6,7 +6,7 @@
             <div class="xl:w-3/12 lg:w-3/12 md:w-3/12 sm:w-6/12 flex-[0_0_auto] max-w-full px-[12px]">
                 <div class="footer-widget sm:mx-0 sm:my-[15px] widget-1">
                     <div class="footer-logo mb-10">
-                        <a href="index.html#">
+                        <a href="#">
                             <img height="80" width="70" src="{{asset('assets/img/leego/LEEGO-OGO-png.png')}}" alt="footer-logo" class="img-fluid" />
                         </a>
                     </div>
@@ -26,16 +26,16 @@
                     </h3>
                     <ul class="footer-popu-link">
                         <li class="block mb-[15px] last:mb-0">
-                            <a class="text-[#757575] capitalize font-semibold text-[15px]" href="{{route('services.index')}}">Our Services </a>
+                            <a class="text-[#757575] capitalize font-semibold text-[15px]" href="{{route('frontend.services.index')}}">Our Services </a>
                         </li>
                         <li class="block mb-[15px] last:mb-0">
-                            <a class="text-[#757575] capitalize font-semibold text-[15px]" href="index.html#">Equipment Rentals </a>
+                            <a class="text-[#757575] capitalize font-semibold text-[15px]" href="#">Equipment Rentals </a>
                         </li>
                         <li class="block mb-[15px] last:mb-0">
                             <a class="text-[#757575] capitalize font-semibold text-[15px]" href="{{route('project.index')}}">Projects </a>
                         </li>
                         <li class="block mb-[15px] last:mb-0">
-                            <a class="text-[#757575] capitalize font-semibold text-[15px]" href="index.html#">Safety Standards </a>
+                            <a class="text-[#757575] capitalize font-semibold text-[15px]" href="#">Safety Standards </a>
                         </li>
                         <li class="block mb-[15px] last:mb-0">
                             <a class="text-[#757575] capitalize font-semibold text-[15px]" href="{{route('about')}}">About Us </a>
@@ -52,16 +52,16 @@
                     </h3>
                     <ul class="list-inline tag-list">
                         <li class="inline-block ml-0 mr-[5px] mt-0 mb-2.5">
-                            <a class="text-[13px] leading-6 text-[#363636] border block transition-all duration-[0.2s] px-2 py-2.5 border-solid border-[#f1f1f1] hover:text-white hover:bg-[#ffab00]" href="index.html#">Road Construction</a>
+                            <a class="text-[13px] leading-6 text-[#363636] border block transition-all duration-[0.2s] px-2 py-2.5 border-solid border-[#f1f1f1] hover:text-white hover:bg-[#ffab00]" href="#">Road Construction</a>
                         </li>
                         <li class="inline-block ml-0 mr-[5px] mt-0 mb-2.5">
-                            <a class="text-[13px] leading-6 text-[#363636] border block transition-all duration-[0.2s] px-2 py-2.5 border-solid border-[#f1f1f1] hover:text-white hover:bg-[#ffab00]" href="index.html#">Bridge Building</a>
+                            <a class="text-[13px] leading-6 text-[#363636] border block transition-all duration-[0.2s] px-2 py-2.5 border-solid border-[#f1f1f1] hover:text-white hover:bg-[#ffab00]" href="#">Bridge Building</a>
                         </li>
                         <li class="inline-block ml-0 mr-[5px] mt-0 mb-2.5">
-                            <a class="text-[13px] leading-6 text-[#363636] border block transition-all duration-[0.2s] px-2 py-2.5 border-solid border-[#f1f1f1] hover:text-white hover:bg-[#ffab00]" href="index.html#">Heavy Machinery</a>
+                            <a class="text-[13px] leading-6 text-[#363636] border block transition-all duration-[0.2s] px-2 py-2.5 border-solid border-[#f1f1f1] hover:text-white hover:bg-[#ffab00]" href="#">Heavy Machinery</a>
                         </li>
                         <li class="inline-block ml-0 mr-[5px] mt-0 mb-2.5">
-                            <a class="text-[13px] leading-6 text-[#363636] border block transition-all duration-[0.2s] px-2 py-2.5 border-solid border-[#f1f1f1] hover:text-white hover:bg-[#ffab00]" href="index.html#">Excavation</a>
+                            <a class="text-[13px] leading-6 text-[#363636] border block transition-all duration-[0.2s] px-2 py-2.5 border-solid border-[#f1f1f1] hover:text-white hover:bg-[#ffab00]" href="#">Excavation</a>
                         </li>
 
                     </ul>
@@ -76,7 +76,7 @@
                     </h3>
                     <div class="office-address border-b-[1px] border-solid border-[#dee2e6] mb-5 pb-5">
                         <h4>
-                            <a class="text-[18px] text-black font-semibold block capitalize mb-5 font-Montserrat" href="index.html#">Head Office</a>
+                            <a class="text-[18px] text-black font-semibold block capitalize mb-5 font-Montserrat" href="#">Head Office</a>
                         </h4>
                         <p class="text-[#757575]">M1 street, Mpemba, Opposite Admarc Stage, Blantyre</p>
                     </div>

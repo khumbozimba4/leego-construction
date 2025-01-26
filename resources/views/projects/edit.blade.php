@@ -82,9 +82,9 @@
                         <div class="form-group col-md-6 col-lg-6">
                             <label for="status">Status</label>
                             <select class="form-control" id="status" name="status" style="@error('status')border:1px solid red;@enderror">
-                                <option value="Pending" {{ old('status', $project->status) == 'Pending' ? 'selected' : '' }}>Pending</option>
-                                <option value="In Progress" {{ old('status', $project->status) == 'In Progress' ? 'selected' : '' }}>In Progress</option>
-                                <option value="Completed" {{ old('status', $project->status) == 'Completed' ? 'selected' : '' }}>Completed</option>
+                                <option value="pending" {{ old('status', $project->status) == 'pending' ? 'selected' : '' }}>Pending</option>
+                                <option value="ongoing" {{ old('status', $project->status) == 'ongoing' ? 'selected' : '' }}>Ongoing</option>
+                                <option value="completed" {{ old('status', $project->status) == 'completed' ? 'selected' : '' }}>Completed</option>
                             </select>
                             @error('status')
                                 <div style="color: red;">

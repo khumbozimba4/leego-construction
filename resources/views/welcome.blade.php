@@ -44,69 +44,32 @@
                 </div>
                 <div class="container">
                     <div class="flex flex-wrap mx-[-12px]">
+
+                        @foreach ($data['projects'] as $item)
                         <div class="w-4/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
                             <div class="single-blog">
                                 <div class="img-date-wrape relative">
-                                    <img src="assets/img/blog/blog-1.jpg" alt=""
-                                        class="img-fluid w-full rounded-[4px_4px_0_0]" />
+                                    <img src="{{asset('storage/'.$item->file)}}" alt=""
+                                        class="img-fluid w-full rounded-[4px_4px_0_0]" style="width: 900px; height: 300px;" />
                                     <div
                                         class="blog-date inline-block text-white text-[14px] font-normal capitalize leading-[14px] absolute p-[15px] right-0 bottom-[30px] bg-[#ffab00] font-OpenSans">
-                                        january 01, 2019</div>
+                                        {{ $item->end_date }}
+                                    </div>
                                 </div>
                                 <div class="blog-content pt-[15px] pb-[30px] px-[15px]">
                                     <h3>
                                         <a class=" text-[20px] leading-[30px] font-semibold text-[#222222] capitalize font-Montserrat"
-                                            href="#">industrial revolution factory</a>
+                                            href="#">{{$item->name}}</a>
                                     </h3>
                                     <span class=" w-[100px] h-[5px] block mx-0 my-3 bg-[#ffab00]"></span>
-                                    <p class=" text-[15px] text-[#363636]">industry. Lorem Ipsum has been the ever a industry
-                                        standard dummy text ever since is the
-                                        1500 an unknown printer took a text ever since is the 1500</p>
+                                    <p class=" text-[15px] text-[#363636]">{{Str::limit($item->description,100)}}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-4/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
-                            <div class="single-blog">
-                                <div class="img-date-wrape relative">
-                                    <img src="assets/img/blog/blog-2.jpg" alt=""
-                                        class="img-fluid w-full rounded-[4px_4px_0_0]" />
-                                    <div
-                                        class="blog-date inline-block text-white text-[14px] font-normal capitalize leading-[14px] absolute p-[15px] right-0 bottom-[30px] bg-[#ffab00] font-OpenSans">
-                                        march 11, 2018</div>
-                                </div>
-                                <div class="blog-content pt-[15px] pb-[30px] px-[15px]">
-                                    <h3>
-                                        <a class=" text-[20px] leading-[30px] font-semibold text-[#222222] capitalize font-Montserrat"
-                                            href="#">our genius engineer</a>
-                                    </h3>
-                                    <span class=" w-[100px] h-[5px] block mx-0 my-3 bg-[#ffab00]"></span>
-                                    <p class=" text-[15px] text-[#363636]">industry. Lorem Ipsum has been the ever a industry
-                                        standard dummy text ever since is the
-                                        1500 an unknown printer took a text ever since is the 1500</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-4/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
-                            <div class="single-blog">
-                                <div class="img-date-wrape relative">
-                                    <img src="assets/img/blog/blog-3.jpg" alt=""
-                                        class="img-fluid w-full rounded-[4px_4px_0_0]" />
-                                    <div
-                                        class="blog-date inline-block text-white text-[14px] font-normal capitalize leading-[14px] absolute p-[15px] right-0 bottom-[30px] bg-[#ffab00] font-OpenSans">
-                                        December 10, 2011</div>
-                                </div>
-                                <div class="blog-content pt-[15px] pb-[30px] px-[15px]">
-                                    <h3>
-                                        <a class=" text-[20px] leading-[30px] font-semibold text-[#222222] capitalize font-Montserrat"
-                                            href="#">technical solution consultant</a>
-                                    </h3>
-                                    <span class="w-[100px] h-[5px] block mx-0 my-3 bg-[#ffab00]"></span>
-                                    <p class=" text-[15px] text-[#363636]">industry. Lorem Ipsum has been the ever a industry
-                                        standard dummy text ever since is the
-                                        1500 an unknown printer took a text ever since is the 1500</p>
-                                </div>
-                            </div>
-                        </div>
+
+                        @endforeach
+
+
                     </div>
                     <div class="spacer-15 h-[15px] sm:h-0"></div>
 

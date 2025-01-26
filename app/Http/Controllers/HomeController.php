@@ -33,7 +33,8 @@ class HomeController extends Controller
             'about_our_company_on_home_page' => Setting::where('key', 'about_our_company_on_home_page')->value('value'),
             'services' => Service::all(),
             'projectsCount' => Project::count(),
-            'teamCount' => Team::count()
+            'teamCount' => Team::count(),
+            'projects' => Project::orderByDesc('created_at')->take(3)->get()
         ];
 
         return view('welcome', compact('data'));
@@ -89,7 +90,7 @@ class HomeController extends Controller
 
     public function projects()
     {
-        $projects = Project::orderBy('created_at', 'desc')->paginate(20);
+        $projects = Project::orderByDesc('created_at')->paginate(20);
         return view('projects', compact('projects'));
     }
     public function about()

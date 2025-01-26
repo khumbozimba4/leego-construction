@@ -84,7 +84,7 @@ class ProjectController extends Controller
             'description' => 'nullable|string',
             'start_date' => 'required|date',
             'end_date' => 'nullable|date|after_or_equal:start_date',
-            'status' => 'required|in:pending,completed,canceled',
+            'status' => 'required|in:pending,completed,ongoing',
         ]);
 
         if ($validator->fails()) {

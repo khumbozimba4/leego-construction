@@ -20,6 +20,7 @@ class Project extends Model
         'client',
         'budget',
         'file',
+        'created_at',
     ];
 
     public function user()

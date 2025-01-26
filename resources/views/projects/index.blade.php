@@ -70,7 +70,7 @@
                             @foreach ($projects as $project)
                                 <tr>
                                     <td> {{ $project->name }} </td>
-                                    <td> {{ $project->description }} </td>
+                                    <td> {{ Str::limit($project->description,50) }} </td>
                                     <td> {{ $project->client }} </td>
                                     <td> MWK{{ number_format($project->budget, 2) }} </td>
                                     <td> {{ $project->status }} </td>

@@ -12,9 +12,9 @@
                         <div class="container relative">
                             <div class="flex flex-wrap mx-[-12px]">
                                 <div class="w-full flex-[0_0_auto] px-[12px] max-w-full">
-                                    <h4 class="text-white text-[50px] font-bold uppercase leading-[80px]">
+                                    <h5 class="text-white text-[40px] font-bold uppercase leading-[80px]">
                                         {!! $slide['title'] !!}
-                                    </h4>
+                                    </h5>
                                     <p class="text-white text-lg mt-5 mb-[33px] mx-0">
                                         {{ $slide['description'] }}
                                     </p>

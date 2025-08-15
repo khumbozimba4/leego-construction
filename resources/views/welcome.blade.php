@@ -93,23 +93,37 @@
                             class=" text-[#222222] text-[15px] font-semibold tracking-[1px] leading-[21px] uppercase px-5 py-2.5 border-0 font-OpenSans inline-block btn-type-5 mt-[30px]">about
                             more</a>
                     </div>
-                    <div class="w-6/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
-                        <div class="about-slider-wraper owl-carousel owl-theme sm:mt-5">
-                            <div
-                                class="about-single-item relative before:content-[''] before:absolute before:transition-[0.3s] before:duration-[all] before:inset-0 before:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)0%,rgba(2,2,0,0)1%,#222_100%)]">
-                                <img src="{{asset('assets/img/leego/bolamag.jpeg')}}"  alt="about-img" class="img-fluid" />
-                                <h4 class=" text-black absolute text-lg capitalize left-5 bottom-5">industrial proven
-                                    equipments</h4>
-                            </div>
+                  <div class="w-6/12 sm:w-full flex-[0_0_auto] max-w-full px-[12px]">
+                    <div class="about-slider-wraper owl-carousel owl-theme sm:mt-5">
 
-                            <div
-                            class="about-single-item relative before:content-[''] before:absolute before:transition-[0.3s] before:duration-[all] before:inset-0 before:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)0%,rgba(2,2,0,0)1%,#222_100%)]">
-                            <img src="{{asset('assets/img/leego/ncic.png')}}"  alt="about-img" class="img-fluid" />
-                            <h4 class=" text-black absolute text-lg capitalize left-5 bottom-1">Certified by the best</h4>
+                        <!-- First slide -->
+                        <div class="about-single-item relative before:content-[''] before:absolute before:transition-all before:duration-300 before:inset-0 before:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)0%,rgba(2,2,0,0)1%,#222_100%)]">
+                            <h4 class="text-black absolute text-lg capitalize left-5">
+                                industrial proven equipments
+                            </h4>
+                            <img
+                                src="{{ asset('assets/img/leego/bolamag.jpg') }}"
+                                alt="about-img"
+                                class="w-[60px] h-[80px] md:w-[120px] md:h-[160px] object-cover mx-auto"
+                            />
                         </div>
 
+                        <!-- Second slide -->
+                        <div
+                            class="about-single-item relative before:content-[''] before:absolute before:transition-all before:duration-300 before:inset-0 before:bg-[linear-gradient(to_bottom,rgba(0,0,0,0)0%,rgba(2,2,0,0)1%,#222_100%)]">
+                            <img
+                                src="{{ asset('assets/img/leego/ncic.png') }}"
+                                alt="about-img"
+                                class="w-[60px] h-[80px] md:w-[120px] md:h-[160px] object-cover mx-auto"
+                            />
+                            <h4 class="text-black absolute text-lg capitalize left-5 bottom-1">
+                                Certified by the best
+                            </h4>
                         </div>
+
                     </div>
+                  </div>
+
                 </div>
             </div>
         </div>
